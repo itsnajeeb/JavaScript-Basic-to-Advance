@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" height="150px" id="owl" src="https://assets-global.website-files.com/63923a65d5aabf0ad18a0ebd/6492c3a2bfcc54669cc2e223_cover.jpg" alt="photoshop">
+            </li>  
+            <li>
+                <img width="200px" height="150px" id="japan" src="https://worldstrides.com/wp-content/uploads/2015/07/iStock_000057240506_Large.jpg" alt="photoshop">
+            </li> 
+            <li>
+                <img width="200px" height="150px" id="prayer" src="https://i.swncdn.com/media/950w/via/images/2023/12/14/33953/33953-hands-in-prayer_source_file.jpg" alt="photoshop">
+            </li> 
+            <li>
+                <img width="200px" height="150px" id="river" src="https://i0.wp.com/geologyscience.com/wp-content/uploads/2023/01/rural-summer-sunset-landscape-with-river-dramatic-colorful-sky-natural-background-aerial-view_548832-2395.jpg?fit=2000%2C1332&ssl=1" alt="photoshop">
+            </li>
+            <li>
+                <a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    // document.getElementById("owl").onclick=function(){
+    //     alert("clicked")
+    // }
+
+    
+    // must read 
+    // type, timestamp, defaultPrevented,
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY,screenX,screenY
+    //altkey,ctrlKey, shiftKey, keyCode
+
+
+    // // another way 
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     // alert('owl clicked again')
+    //     console.log('Clicked inside the ul');
+    // },false)
+    
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     // alert('owl clicked again')
+    //     console.log('Clicked on owl');
+    //     // e.stopPropagation()
+    // },true)
+
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        // console.log('clicked on google');
+    })
+
+    document.getElementById("images").addEventListener('click',function(e){
+        // console.log(e.target.tagName);
+        console.log(e.target.parentNode);
+        
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.tagName);
+            let removeIt=e.target.parentNode;
+            removeIt.remove()
+        }
+
+    })
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
