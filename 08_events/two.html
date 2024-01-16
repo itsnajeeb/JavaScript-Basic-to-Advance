@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body bgcolor="#02222" style="color:aliceblue">
+    <h1 id="txt">Chai Aur Code</h1>
+    <div id="txt"></div>
+    <button id="stop">Stop</button>
+    <script>
+        // setTimeout(() => {
+        //     console.log("Downloading Start ....");
+        // }, 10000);
+
+        let text = document.querySelector('h1')
+        const changeMe=setTimeout(() => {
+            text.innerHTML="Best JS Course !"
+        }, 5000);
+        document.querySelector('#stop').addEventListener('click',()=>{
+            clearTimeout(changeMe)
+            console.log('Time Stop');
+        });
+        
+
+
+    </script>
+</body>
+
+
+</html>
