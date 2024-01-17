@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        .bookTicketBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body {
+            background-color: #535252;
+        }
+
+        .ticketCounter p:hover {
+            text-align: center;
+            cursor: pointer;
+            width: 30px;
+            animation: .3;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #f84464;
+            color: #fff;
+        }
+
+        .ticketCounter p {
+            width: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <div class="bookTicketBtn">
+        <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Book Your Ticket
+        </button>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">How Many Seats ?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="image d-flex justify-content-center"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0VX4iJhc1tZOAJED2M-MWEa-ATzvjwYaEbw&usqp=CAU"
+                            alt="" id="img"></div>
+                </div>
+                <div class="ticketCounter d-flex justify-content-around">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100">Select Seats </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // document.addEventListener('click', function () {
+            // let imageContainer = document.querySelector('.image')
+            // console.log(imageContainer);
+            let ticketCounter=document.querySelectorAll('.ticketCounter p');
+            console.log(ticketCounter);
+            ticketCounter.addEventListener('click',function(){
+                ticketCounter.forEach(function(para){
+                    console.log(para.innerHTML);
+                })
+            })
+        // })
+    </script>
+</body>
+
+</html>
