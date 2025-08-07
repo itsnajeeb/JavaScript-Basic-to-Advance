@@ -1,7 +1,7 @@
+let h1= document.querySelector('h1')
 
-const div = document.querySelector('div')
-let h1 = document.createElement('h1')
-h1.textContent= "This heading created by JS"
-let span = document.createElement('span')
-h1.appendChild(span)
-div.append(h1)
+// h1.classList.add('heading')
+// h1.classList.remove('heading')
+h1.classList.toggle('heading')
+console.dir(h1);
+
