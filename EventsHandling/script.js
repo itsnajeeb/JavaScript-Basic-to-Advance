@@ -1,15 +1,26 @@
-let div = document.querySelector('#main')
-// div.addEventListener('mouseover',function(){
-//     div.style.backgroundColor="yellow"
-//     div.style.borderRadius='50%'
-// })
-// div.addEventListener('mouseout',function(){
-//     div.style.backgroundColor="#000"
-//     div.style.borderRadius='0'
-// })
+let a = document.querySelector('.a')
+let b = document.querySelector('.b')
+let c = document.querySelector('.c')
+let d = document.querySelector('.d')
+let btn = document.querySelector('button')
 
-window.addEventListener('mousemove',function(dets){
-    div.style.top=dets.clientY+'px'
-    div.style.left=dets.clientX+'px'
-    
+
+//Bubbling Click
+btn.addEventListener('click', function(){
+    console.log("Button Clicked");
 })
+a.addEventListener('click', function(){
+    console.log("A Clicked");
+})
+d.addEventListener('click', function(){
+    console.log("D Clicked");
+})
+c.addEventListener('click', function(){
+    console.log("C Clicked");
+})
+b.addEventListener('click', function(){
+    console.log("B Clicked");
+})
+
+//Catch Event
+
