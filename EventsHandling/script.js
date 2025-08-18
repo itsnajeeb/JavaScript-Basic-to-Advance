@@ -1,26 +1,11 @@
-let a = document.querySelector('.a')
-let b = document.querySelector('.b')
-let c = document.querySelector('.c')
-let d = document.querySelector('.d')
-let btn = document.querySelector('button')
+let inp = document.querySelector('input')
+let span = document.querySelector('span')
 
-
-//Bubbling Click
-btn.addEventListener('click', function(){
-    console.log("Button Clicked");
+inp.addEventListener('input', function () {
+    let left = 20 - inp.value.length
+    span.textContent = left
+    if (left < 0) 
+        span.style.color = "red"
+    else
+        span.style.color = "white"
 })
-a.addEventListener('click', function(){
-    console.log("A Clicked");
-})
-d.addEventListener('click', function(){
-    console.log("D Clicked");
-})
-c.addEventListener('click', function(){
-    console.log("C Clicked");
-})
-b.addEventListener('click', function(){
-    console.log("B Clicked");
-})
-
-//Catch Event
-
