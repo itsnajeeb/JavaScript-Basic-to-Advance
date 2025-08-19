@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+
+        form {
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px 0px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional */
+        }
+
+        input {
+            font-size: 18px;
+            padding: 12px 15px;
+            width: 500px;
+            display: block;
+            border: 2px solid rgb(24, 24, 60);
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type='submit'] {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 8px;
+        }
+
+        /* .container .form-container form .error_message { */
+        .error_message {
+            color: red;
+            font-size: 18px;
+            display: none;
+        }
+
+        .container .form-container h1 {
+            color: #242424;
+            text-align: center;
+            padding: 1rem;
+
+        }
+
+       
+    </style>
+</head>
+
+<body style="background-color: #242424; color: #fff;">
+
+    <div class="container">
+        <div class="form-container">
+            <h1>Form Validation </h1>
+            <form action="" autocomplete="off">
+                <div class="input-container">
+                    <input type="text" placeholder="Your Name" id="name">
+                    <small id="nameErrorMsg" class="error_message"></small>
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="Your Email" id="email">
+                    <small id="emailErrorMsg" class="error_message" > </small>
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="Your Password" id="password">
+                    <small id="passwordErrorMsg" class="error_message"></small>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
