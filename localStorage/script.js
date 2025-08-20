@@ -15,7 +15,11 @@ localStorage.setItem('Profession', "Software Engineer")
 
 //Get 
 let item =localStorage.getItem('Profession',)
-console.log(item);
 localStorage.clear()
+
+localStorage.setItem('friend' , JSON.stringify(["Najeeb", "Kamil", "Zeeshan"]))
+
+console.log(JSON.parse(localStorage.getItem('friend')));
+
 
 
