@@ -16,5 +16,6 @@ localStorage.setItem('Profession', "Software Engineer")
 //Get 
 let item =localStorage.getItem('Profession',)
 console.log(item);
+localStorage.clear()
 
 
