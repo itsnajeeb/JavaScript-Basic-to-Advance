@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Slider (Vanilla JS + Tailwind)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-900 text-white ">
+
+    <div class="flex items-center space-x-6 justify-center ">
+        <!-- Left Controls -->
+        <div class="flex flex-col space-y-4 stack">
+            <button class=" w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600 text-xl" id="add_notes">+</button>
+            <button class=" w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600" id="upBtn">↑</button>
+            <button class=" w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600" id="downBtn">↓</button>
+        </div>
+
+        <!-- Card -->
+        <div id="stack" class="flex flex-col space-y-2 items-center"></div>
+
+        <!-- Right Color Selector -->
+        <div class="flex flex-col space-y-3">
+            <button id="color0" onclick="changeColor('bg-black')"
+                class="w-6 h-6 rounded-full bg-black border-2 border-white"></button>
+            <button id="color1" onclick="changeColor('bg-purple-800')"
+                class="w-6 h-6 rounded-full bg-purple-800 border-2 border-transparent"></button>
+            <button id="color2" onclick="changeColor('bg-amber-900')"
+                class="w-6 h-6 rounded-full bg-amber-900 border-2 border-transparent"></button>
+            <button id="color3" onclick="changeColor('bg-teal-600')"
+                class="w-6 h-6 rounded-full bg-teal-600 border-2 border-transparent"></button>
+        </div>
+    </div>
+
+    <!-- Form Modal -->
+    <div id="formModal" class="fixed inset-0 hidden flex items-center justify-center bg-black/50 z-10">
+        <form action="" class="bg-gray-800 p-6 rounded-2xl  w-96 text-white border mx-auto" autocomplete="off">
+            <h2 class="text-lg font-bold mb-3">New Call</h2>
+            <div class="space-y-3">
+                <div class="flex flex-col gap-2 ">
+                    <label for="" class="block ml-1">Image URL</label>
+                    <input type="text" name="imageUrl" required placeholder="https://example.com/photo.jpg"
+                        class="bg-gray-900 py-2 text-base outline-none px-4 rounded-xl w-full">
+                </div>
+                <div class="flex flex-col gap-2 ">
+                    <label for="" class="block ml-1">Full Name</label>
+                    <input type="text" name="fullName" required placeholder="Enter Full Name"
+                        class="bg-gray-900 py-2 text-base outline-none px-4 rounded-xl w-full">
+                </div>
+
+                <div class="flex flex-col gap-2 ">
+                    <label for="" class="block ml-1">Home Town</label>
+                    <input type="text" name="homeTown" required placeholder="Enter Home Town"
+                        class="bg-gray-900 py-2 text-base outline-none px-4 rounded-xl w-full">
+                </div>
+
+                <div class="flex flex-col gap-2 ">
+                    <label for="" class="block ml-1">Purpose</label>
+                    <input type="text" name="purpose" required placeholder="Quick appointment note"
+                        class="bg-gray-900 py-2 text-base outline-none px-4 rounded-xl w-full">
+                </div>
+                <div class="flex flex-col  gap-2">
+                    <label for="" class="block ml-1">Category</label>
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" name="category" value="Emergency">
+                        <p>Emergency</p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" name="category" value="Important">
+                        <p>Important</p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" name="category" value="Urgent">
+                        <p>Urgent</p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" name="category" value="No Rush">
+                        <p>No Rush</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <input id="formName" type="text" placeholder="Name" class="w-full p-2 border rounded mb-3" /> -->
+            <!-- <input id="formTown" type="text" placeholder="Hometown" class="w-full p-2 border rounded mb-3" /> -->
+            <!-- <input id="formBookings" type="number" placeholder="Bookings" class="w-full p-2 border rounded mb-3" /> -->
+            <div class="flex justify-end gap-3">
+                <button type="button" class="px-4 py-2 rounded bg-gray-500 closeForm">Cancel</button>
+                <button type="submit" class="px-4 py-2 rounded bg-blue-600 text-white">Create </button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

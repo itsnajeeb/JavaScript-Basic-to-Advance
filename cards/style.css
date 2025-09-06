@@ -1,0 +1,92 @@
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px) scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px) scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        #stack {
+            position: relative;
+            width: 320px;
+
+        }
+
+        #stack .card {
+            position: absolute;
+            top: -120px;
+            left: 0;
+            border: 1px solid gray
+        }
+
+        .card:nth-child(1) {
+            z-index: 4;
+        }
+
+        .card:nth-child(2) {
+            z-index: 3;
+            transform: translateY(5px) scale(0.98);
+            opacity: 0.9;
+        }
+
+        .card:nth-child(3) {
+            z-index: 2;
+            transform: translateY(10px) scale(0.96);
+            opacity: 0.7;
+        }
+
+        .card:nth-child(4) {
+            z-index: 1;
+            transform: translateY(15px) scale(0.94);
+            opacity: 0.5;
+        }
+
+
+
+        .slide-up {
+            animation: slideUp 0.4s ease forwards;
+        }
+
+        .slide-down {
+            animation: slideDown 0.4s ease forwards;
+        }
